@@ -19,10 +19,10 @@ public class Twitter {
 	public void postTweet() {
 		
 		Response response = RestAssured.given().auth()
-				.oauth("5IEndJKw87g7UidifaXKi0tcu",
-						"fPkcKbNKGEh73ADtGs3SDTrS49qLaVAh4ndV9wyanL9K1xKxe6",
-						"2838134280-PgCso4dAQJdY7JvqdSREfDj5SUBSTBSK2kkKNdZ",
-						"PsO5paAyfKbTcgO4lXXLeZDMM9Q8IKwfqqvfW8KhsLDpU")
+				.oauth("5IEndJKw87g7aXXXXXXX",
+						"fPkcKbNKGEh73ADtGs3SDTrS49qLaVAh4ndV9wyaXXXXXXX",
+						"2838134280-PgCso4dAQJdY7JvqdSREfDj5SUBaXXXXXXX",
+						"PsO5paAyfKbTcgO4lXXLeZDMM9Q8IKwfqqvaXXXXXXX")
 				.post("https://api.twitter.com/1.1/statuses/update.json?="
 						+ "status= My first Rest Assured Api Test tweet ");
 		System.out.println(response.getStatusCode());
@@ -34,10 +34,10 @@ public class Twitter {
 		
 		Response response = RestAssured.given().auth()
 				.oauth("5IEndJKw87g7UidifaXKi0tcu",
-						"fPkcKbNKGEh73ADtGs3SDTrS49qLaVAh4ndV9wyanL9K1xKxe6",
-						"2838134280-PgCso4dAQJdY7JvqdSREfDj5SUBSTBSK2kkKNdZ",
-						"PsO5paAyfKbTcgO4lXXLeZDMM9Q8IKwfqqvfW8KhsLDpU")
-				.delete("https://api.twitter.com/1.1/statuses/destroy/:1215585494798495744");
+						"fPkcKbNKGEh73ADtGs3SDTrS49qLaVAh4ndV9wyanaXXXXXXX",
+						"2838134280-PgCso4dAQJdY7JvqdSREfDj5aXXXXXXXKNdZ",
+						"PsO5paAyfKbTcgO4lXXLeZDMM9Q8IKwaXXXXXXX")
+				.delete("https://api.twitter.com/1.1/statuses/destroy/:12155854947984aXXXXXXX4");
 		System.out.println(response.getStatusCode());
 		System.out.println(response.getBody().jsonPath().prettify());
 		
