@@ -13,7 +13,7 @@ public class OAuth2 {
 	public void acessValidApi() {
 	Response response	= 
 			RestAssured.given().auth()
-			.oauth2("ef5298a58728bef1d13b578e3e4b7f24d589b50e")
+			.oauth2("ef5298a58728bef1d13b578e3exxxxxxxxxxxxxxxx0e")
 			.post("http://coop.apps.symfonycasts.com/api/670/chickens-feed");
 	
 		System.out.println(response.getStatusCode());
@@ -24,7 +24,7 @@ public class OAuth2 {
 	@Test
 	public void acessValidApiUsing_TokenTest() {
 		Response respose =RestAssured.given().formParam("client_id","RestAssuredLearning")
-		.formParam("client_secret","455c7e891d27d360bd6f1017a513cea5")
+		.formParam("client_secret","455c7e891d27dxxxxxxxxxxxxxxea5")
 		.formParam("grant_type", "client_credentials")
 		.post("http://coop.apps.symfonycasts.com/token");
 		
@@ -40,7 +40,7 @@ public class OAuth2 {
 	@Test
 	public void acessInvalidApi() {
 		Response respose =RestAssured.given().formParam("client_id","RestAssuredLearning")
-				.formParam("client_secret","455c7e891d27d360bd6f1017a513cea5")
+				.formParam("client_secret","455c7e891d27d3xxxxxxxxxxx513cea5")
 				.formParam("grant_type", "client_credentials")
 				.post("http://coop.apps.symfonycasts.com/token");
 			
